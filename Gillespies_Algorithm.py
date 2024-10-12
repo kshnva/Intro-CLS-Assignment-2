@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 def process_probabilities(state, params):
     S, I, R = state['S'], state['I'], state['R']
     a = np.zeros(2)   
-    a[0] = params['beta'] * S * I 
+    a[0] = params['beta'] * S * I /N
     a[1] = params['gamma'] * I   
     return a
 
